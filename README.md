@@ -6,6 +6,7 @@
 ### `MODULE LIST`
 - 66-1 Module overview and project setup
 - 66-2 Set basic Layout for Footer and header
+- 66-3 Style Header and footer and create simple banner
 
 
 ### `PACKAGES`

@@ -3,34 +3,34 @@ import logo from '../../../assets/logo.svg';
 const Footer = () => {
 
     return (
-        <div className="d-flex justify-content-between container">
+        <div className="bg-dark text-light d-flex justify-content-between container p-5">
             
             <div>
                 <img src={logo} alt="" />
-                <p>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
+                <p className='text-light'>ACME Industries Ltd.<br />Providing reliable tech since 1992</p>
             </div>
 
             <div>
                 <span className="footer-title">Services</span><br />
-                <a href="/" className="link link-hover">Branding</a> <br />
-                <a href="/" className="link link-hover">Design</a> <br />
-                <a href="/" className="link link-hover">Marketing</a> <br />
-                <a href="/" className="link link-hover">Advertisement</a> <br />
+                <a href="/" className="link link-hover text-light">Branding</a> <br />
+                <a href="/" className="link link-hover text-light">Design</a> <br />
+                <a href="/" className="link link-hover text-light">Marketing</a> <br />
+                <a href="/" className="link link-hover text-light">Advertisement</a> <br />
             </div>
 
             <div>
                 <span className="footer-title">Company</span><br />
-                <a href="/" className="link link-hover">About us</a> <br />
-                <a href="/" className="link link-hover">Contact</a> <br />
-                <a href="/" className="link link-hover">Jobs</a> <br />
-                <a href="/" className="link link-hover">Press kit</a> <br />
+                <a href="/" className="link link-hover text-light">About us</a> <br />
+                <a href="/" className="link link-hover text-light">Contact</a> <br />
+                <a href="/" className="link link-hover text-light">Jobs</a> <br />
+                <a href="/" className="link link-hover text-light">Press kit</a> <br />
             </div>
 
             <div>
                 <span className="footer-title">Legal</span><br />
-                <a href="/" className="link link-hover">Terms of use</a><br />
-                <a href="/" className="link link-hover">Privacy policy</a><br />
-                <a href="/" className="link link-hover">Cookie policy</a><br />
+                <a href="/" className="link link-hover text-light">Terms of use</a><br />
+                <a href="/" className="link link-hover text-light">Privacy policy</a><br />
+                <a href="/" className="link link-hover text-light">Cookie policy</a><br />
             </div>
 
         </div>
