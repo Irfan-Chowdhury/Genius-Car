@@ -5,6 +5,7 @@
 
 ### `MODULE LIST`
 - 66-1 Module overview and project setup
+- 66-2 Set basic Layout for Footer and header
 
 
 ### `PACKAGES`
@@ -23,7 +24,18 @@
     ```
     and then go and open <i>tailwind.config.js</i> and replace the code.
     ```bash
-    plugins: [require("daisyui")],
+    plugins:
+     [require("daisyui")],
+    ```
+- [React-Bootstrap](https://react-bootstrap.github.io/)
+    ```bash
+    npm install react-bootstrap bootstrap
+    ```
+    and then goto src/index.js and paste the bellow code.
+    ```bash
+    import 'bootstrap/dist/css/bootstrap.min.css';
+    import 'bootstrap/dist/js/bootstrap.min.js';
+
     ```
     
 
