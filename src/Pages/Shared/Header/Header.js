@@ -28,9 +28,8 @@ const Header = () => {
         </div>
       </nav> */}
 
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <div className="container">
-
+      <nav className="navbar navbar-expand-lg">
+        <div className="container navbar-light bg-light">
             <a className="navbar-brand" href="/">
               <img src={logo} alt="Bootstrap" />
             </a>
