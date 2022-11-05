@@ -23,7 +23,7 @@
 - 67-3 Load services data and create checkout page
 - 67-4 Implement Checkout Form to create order object
 - 67-5 Save order on the order collection using Post Method
-
+- 67-6 Use Query parameter to load user specific data
 ## `PACKAGES`
 - Create [React](https://reactjs.org/) App
     ```bash
