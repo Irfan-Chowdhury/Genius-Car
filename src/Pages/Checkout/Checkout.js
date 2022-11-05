@@ -24,6 +24,23 @@ const Checkout = () => {
             phone,
             message
         }
+
+        fetch('http://localhost:5000/orders', {
+            method:'POST',
+            headers:{
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(order)
+        })
+        .then(res => res.json())
+        .then(data =>{
+             console.log(data)
+             if(data.acknowledged){
+                alert('Order Placed successfully');
+                form.reset();
+             }
+        })
+        .catch(err => console.error(err));
     }
 
     return (
@@ -31,24 +48,24 @@ const Checkout = () => {
             <form onSubmit={handlePlaceOrder}>
                 <h2>You are about to order : {title}</h2>
                 <h4>Price : {price}</h4>
-                <div class="row">
-                    <div class="col-6">
-                        <input type="text" name='firstName' class="form-control" placeholder="First name" aria-label="First name" />
+                <div className="row">
+                    <div className="col-6">
+                        <input type="text" name='firstName' className="form-control" placeholder="First name" aria-label="First name" />
                     </div>
-                    <div class="col-6">
-                        <input type="text" name='lastName'  class="form-control" placeholder="Last name" aria-label="Last name" />
+                    <div className="col-6">
+                        <input type="text" name='lastName'  className="form-control" placeholder="Last name" aria-label="Last name" />
                     </div>
-                    <div class="col-6">
-                        <input type="text" name='phone' class="form-control" placeholder="Your Phone" aria-label="Your Phone" />
+                    <div className="col-6">
+                        <input type="text" name='phone' className="form-control" placeholder="Your Phone" aria-label="Your Phone" />
                     </div>
-                    <div class="col-6">
-                        <input type="email" name='email' readOnly class="form-control" defaultValue={user?.email} placeholder="Your Email" aria-label="Your Email" />
+                    <div className="col-6">
+                        <input type="email" name='email' readOnly className="form-control" defaultValue={user?.email} placeholder="Your Email" aria-label="Your Email" />
                     </div>
-                    <div class="col-12">
-                        <textarea class="form-control" name='message' id="exampleFormControlTextarea1" rows="3" placeholder='Message'></textarea>
+                    <div className="col-12">
+                        <textarea className="form-control" name='message' id="exampleFormControlTextarea1" rows="3" placeholder='Message'></textarea>
                     </div>
                 </div>
-                <div class="d-grid gap-2">
+                <div className="d-grid gap-2">
                     <button type="submit" className='btn btn-success'>Place your order</button>
                 </div>
             </form>

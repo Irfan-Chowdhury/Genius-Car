@@ -22,6 +22,7 @@
 - 67-2 Use Dot Env To Hide Credentials And Insert Data In Database
 - 67-3 Load services data and create checkout page
 - 67-4 Implement Checkout Form to create order object
+- 67-5 Save order on the order collection using Post Method
 
 ## `PACKAGES`
 - Create [React](https://reactjs.org/) App
