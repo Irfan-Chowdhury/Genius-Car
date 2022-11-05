@@ -3,7 +3,11 @@
 # Genius Car
 </div>
 
-### `MODULE LIST`
+<p align='left'><i>[Client Section]</i></p>
+
+
+
+## `MODULE LIST`
 - 66-1 Module overview and project setup
 - 66-2 Set basic Layout for Footer and header
 - 66-3 Style Header and footer and create simple banner
@@ -12,8 +16,11 @@
 - 66-6 Fix border radius and relative position image for About section
 - 66-7 Load Services fake data and display service Card
 - 66-8 (Recap) Create a simple Login page with firebase integration
+- 66-9 (Recap) Sign Up page setup
+- 66-10 (Recap) Auth Context setup and create a user and Module Summary and Home work
+- 67-1 Recap set login and set basic server
 
-### `PACKAGES`
+## `PACKAGES`
 - Create [React](https://reactjs.org/) App
     ```bash
     npx create-react-app your-project-name
@@ -45,9 +52,10 @@
     ```bash
     npm install firebase
     ```
+
     
 
-### `Setup Tailwind CSS`
+## `Setup Tailwind CSS`
 Visit [Tailwind CSS with Create React App](https://tailwindcss.com/docs/guides/create-react-app)
 
 - Install Tailwind CSS
@@ -73,4 +81,47 @@ Visit [Tailwind CSS with Create React App](https://tailwindcss.com/docs/guides/c
     @tailwind utilities;
 ```
 
+## `Setup Server`
+- First create a folder and then run this command for generating <i>package.json</i>
+    ```bash
+     npm init -y
+    ```
+- Secondly run this
+    ```bash
+     npm i express cors mongodb
+    ```
+- Third, [DotENV](https://www.npmjs.com/package/dotenv)
+    ```bash
+    npm install dotenv --save
+    ```
 
+- open <i>package.json</i> file and add the code (it's need for server) 
+    ```bash
+    "scripts": {
+        "start":"node index.js",
+    },
+    ```
+
+- create a index.js file and setup basic code 
+    ```bash
+    const express = require('express')
+    const app = express();
+    const cors = require('cors')
+    const port = process.env.PORT || 5000;
+
+    app.use(cors());
+    app.use(express.json());
+
+    app.get('/', (req, res) => {
+        res.send('Genius Car server is running');
+    });
+
+    app.listen(port, () =>{
+        console.log('Genius Car Server running on port', port);
+    });
+    ```
+
+- Run server
+    ```bash
+    nodemon index.js
+    ```
