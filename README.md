@@ -5,6 +5,9 @@
 
 <p align='left'><i>[Server Section]</i></p>
 
+## `MODULE LIST`
+- 67-1 Recap set login and set basic server
+- 67-2 Use Dot Env To Hide Credentials And Insert Data In Database
 
 ## `Setup Server`
 - First create a folder and then run this command for generating <i>package.json</i>
@@ -49,6 +52,12 @@
 - Run server
     ```bash
     nodemon index.js
+    ```
+- Remove a attribute id from a file
+    ```bash
+    CTRL + D
+    & then
+    Home + Shift + -> + Backspace
     ```
 
 
