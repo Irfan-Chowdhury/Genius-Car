@@ -8,6 +8,9 @@
 ## `MODULE LIST`
 - 67-1 Recap set login and set basic server
 - 67-2 Use Dot Env To Hide Credentials And Insert Data In Database
+- 67-3 Load services data and create checkout page
+- 67-5 Save order on the order collection using Post Method
+- 67-6 Use Query parameter to load user specific data
 
 ## `Setup Server`
 - First create a folder and then run this command for generating <i>package.json</i>
