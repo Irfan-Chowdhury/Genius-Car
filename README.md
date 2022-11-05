@@ -11,6 +11,7 @@
 - 66-5 Dynamic Data for banner with gradient overlay
 - 66-6 Fix border radius and relative position image for About section
 - 66-7 Load Services fake data and display service Card
+- 66-8 (Recap) Create a simple Login page with firebase integration
 
 ### `PACKAGES`
 - Create [React](https://reactjs.org/) App
@@ -39,7 +40,10 @@
     ```bash
     import 'bootstrap/dist/css/bootstrap.min.css';
     import 'bootstrap/dist/js/bootstrap.min.js';
-
+    ```
+- [Firebase](https://console.firebase.google.com/)
+    ```bash
+    npm install firebase
     ```
     
 
