@@ -9,6 +9,7 @@
 - 66-3 Style Header and footer and create simple banner
 - 66-4 Style Banner Component, work with text and buttons
 - 66-5 Dynamic Data for banner with gradient overlay
+- 66-6 Fix border radius and relative position image for About section
 
 ### `PACKAGES`
 - Create [React](https://reactjs.org/) App
