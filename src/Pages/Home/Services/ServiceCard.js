@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const ServiceCard = ({ service }) => {
-    const {title, img, price} = service;
+    const {_id, title, img, price} = service;
     return (
         <div className="col-3 p-2 ms-5">
             <div className="card">
@@ -9,7 +10,9 @@ const ServiceCard = ({ service }) => {
                 <div className="card-body text-start">
                     <h5 className="card-title text-dark">{title}</h5>
                     <h5 className="card-title text-danger">Price $ {price}</h5>
-                    <a href="/" class="btn btn-primary btn-sm">Buy Now</a>
+                    <Link to={`/checkout/${_id}`}>
+                        <button className='btn btn-primary btn-sm'>Buy Now</button>
+                    </Link>
                 </div>
             </div>
         </div>
