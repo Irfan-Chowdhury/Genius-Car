@@ -25,6 +25,7 @@
 - 67-5 Save order on the order collection using Post Method
 - 67-6 Use Query parameter to load user specific data
 - 67-7 Display orders and Service image in a tabular format
+- 67-8 Create Private route and move delete handler
 
 ## `PACKAGES`
 - Create [React](https://reactjs.org/) App
