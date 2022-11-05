@@ -60,4 +60,6 @@
     Home + Shift + -> + Backspace
     ```
 
+- Sometime need to acces. Please goto <b> MongoDB > DB Access</b>. and then secet <b>Edit</b> of a users then follow the screenshot. <br/><br/>
+<img src="https://snipboard.io/h8c3tx.jpg" />
 
