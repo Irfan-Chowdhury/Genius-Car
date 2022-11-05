@@ -21,6 +21,7 @@
 - 67-1 Recap set login and set basic server
 - 67-2 Use Dot Env To Hide Credentials And Insert Data In Database
 - 67-3 Load services data and create checkout page
+- 67-4 Implement Checkout Form to create order object
 
 ## `PACKAGES`
 - Create [React](https://reactjs.org/) App
