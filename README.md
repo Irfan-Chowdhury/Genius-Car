@@ -11,6 +11,8 @@
 - 67-3 Load services data and create checkout page
 - 67-5 Save order on the order collection using Post Method
 - 67-6 Use Query parameter to load user specific data
+- 67-8 Create Private route and move delete handler
+- 67-9 Module summary and update operation
 
 ## `Setup Server`
 - First create a folder and then run this command for generating <i>package.json</i>
