@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import login from '../../assets/images/login/login.svg';
 
 const Login = () => {
@@ -19,20 +20,20 @@ const Login = () => {
 
                         <div className="form-floating mb-3">
                             <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" />
-                            <label for="floatingInput">Email address</label>
+                            <label htmlFor="floatingInput">Email address</label>
                         </div>
                         <div className="form-floating mb-3">
                             <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
-                            <label for="floatingPassword">Password</label>
+                            <label htmlFor="floatingPassword">Password</label>
                         </div>
                         <div className="checkbox mb-3">
                             <label>
                                 <input type="checkbox" value="remember-me" /> Remember me
                             </label>
                         </div>
-                        <button className="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+                        <button className="w-100 btn btn-lg btn-primary" type="submit">LOGIN</button>
                         <hr className="my-4" />
-                        <small className="text-muted">By clicking Sign up, you agree to the terms of use.</small>
+                        <small className="text-muted">New to Genius Car ? Please <Link to='/signup'>Sign Up</Link></small>
                     </form>
                 </div>
             </div>
