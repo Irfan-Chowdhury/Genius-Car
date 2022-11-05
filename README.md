@@ -10,6 +10,7 @@
 - 66-4 Style Banner Component, work with text and buttons
 - 66-5 Dynamic Data for banner with gradient overlay
 - 66-6 Fix border radius and relative position image for About section
+- 66-7 Load Services fake data and display service Card
 
 ### `PACKAGES`
 - Create [React](https://reactjs.org/) App
