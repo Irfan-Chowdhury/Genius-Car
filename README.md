@@ -19,6 +19,7 @@
 - 66-9 (Recap) Sign Up page setup
 - 66-10 (Recap) Auth Context setup and create a user and Module Summary and Home work
 - 67-1 Recap set login and set basic server
+- 67-2 Use Dot Env To Hide Credentials And Insert Data In Database
 
 ## `PACKAGES`
 - Create [React](https://reactjs.org/) App
