@@ -26,7 +26,7 @@ function verifyJWT(req, res, next){
     const token = authHeader.split(' ')[1];
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, function(err, decoded){
         if (err) {
-            res.status(401).send({message:'Unauthorized Access'});
+            res.status(403).send({message:'Forbidden Access'});
         }
         req.decoded = decoded;
         next();
@@ -40,6 +40,7 @@ async function run(){
         const orderCollection = client.db('geniusCar').collection('orders');
 
 
+        // JWT
         app.post('/jwt', (req, res) => {
             const user = req.body;
             // console.log(user);
@@ -63,9 +64,14 @@ async function run(){
             res.send(service);
         });
 
-        // Order API
+        // Order API & JWT
         app.get('/orders',verifyJWT, async (req, res) => {
-            console.log(req.headers.authorization);
+            const decoded = req.decoded;
+            console.log('inside orders API',decoded)
+            if (decoded.email !== req.query.email) {
+                res.status(403).send({message:'Unauthorized Access'});
+            }
+            // console.log(req.headers.authorization);
 
             let query  = {};
             if (req.query.email) {
@@ -79,21 +85,21 @@ async function run(){
         });
 
         // Create
-        app.post('/orders', async (req, res) => {            
+        app.post('/orders',verifyJWT, async (req, res) => {            
             const order = req.body;
             const result =  await orderCollection.insertOne(order);
             res.send(result);
         });
 
         // Delete
-        app.delete('/orders/:id', async (req, res) => {            
+        app.delete('/orders/:id', verifyJWT, async (req, res) => {            
             const id =  req.params.id;
             const query = {_id: ObjectId(id) }
             const result = await orderCollection.deleteOne(query);
             res.send(result);
         });
 
-        app.patch('/orders/:id', async (req, res) => {
+        app.patch('/orders/:id', verifyJWT, async (req, res) => {
             const id =  req.params.id;
             const status = req.body.status;
             const query = {_id: ObjectId(id) }
