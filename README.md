@@ -32,7 +32,10 @@
 
 ## `Tips`
 - Follow the [Link](https://github.com/remix-run/react-router/blob/dev/examples/auth/src/App.tsx) to understand auth
-- JWT (Json Web Token)
+- [JWT](https://jwt.io/) (Json Web Token)
+- Follow the link for install jwt https://jwt.io/libraries?language=Node.js <br>
+  or https://github.com/auth0/node-jsonwebtoken
+
 
 
 ## `PACKAGES`
