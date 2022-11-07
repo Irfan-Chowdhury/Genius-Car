@@ -5,7 +5,13 @@ import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
 
-  const {user} = useContext(AuthContext);
+  const {user, logOut} = useContext(AuthContext);
+
+  const handleLogOut = () => {
+      logOut()
+      .then( () => {})
+      .catch(error => console.error(error));
+  }
 
   const menuItems = <>
     <li className="nav-item">
@@ -17,6 +23,9 @@ const Header = () => {
           <li className="nav-item">
               <Link className="nav-link" aria-current="page" to="/orders">Orders</Link>
           </li>
+          <li className="nav-item">
+              <button onClick={handleLogOut} className="nav-link btn btn-outline-danger" aria-current="page">Logout</button>
+          </li>
         </>
         :
           <li className="nav-item">
@@ -26,7 +35,6 @@ const Header = () => {
 
     
   </>
-
 
   return (
     <div>
@@ -62,7 +70,7 @@ const Header = () => {
                   
               </ul>
               <form className="d-flex">
-                <button className="btn btn-outline-danger" type="submit">Appointment</button>
+                <button className="btn btn-outline-success" type="submit">Appointment</button>
               </form>
             </div>
 

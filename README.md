@@ -27,6 +27,11 @@
 - 67-7 Display orders and Service image in a tabular format
 - 67-8 Create Private route and move delete handler
 - 67-9 Module summary and update operation
+- 69-2 (Recap) Auth redirect after successful login
+
+## `Tips`
+- Follow the [Link](https://github.com/remix-run/react-router/blob/dev/examples/auth/src/App.tsx) to understand auth
+
 
 ## `PACKAGES`
 - Create [React](https://reactjs.org/) App
