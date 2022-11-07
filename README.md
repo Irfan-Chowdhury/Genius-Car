@@ -28,9 +28,11 @@
 - 67-8 Create Private route and move delete handler
 - 67-9 Module summary and update operation
 - 69-2 (Recap) Auth redirect after successful login
+- 69-3 Filter orders info by email address Introduction JWT token
 
 ## `Tips`
 - Follow the [Link](https://github.com/remix-run/react-router/blob/dev/examples/auth/src/App.tsx) to understand auth
+- JWT (Json Web Token)
 
 
 ## `PACKAGES`
