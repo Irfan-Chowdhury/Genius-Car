@@ -1,13 +1,13 @@
 const express = require('express')
-const app = express();
 const cors = require('cors');
-
-var jwt = require('jsonwebtoken');
-var token = jwt.sign({ foo: 'bar' }, process.env.ACCESS_TOKEN_SECRET);
-
-const port = process.env.PORT || 5000;
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 require('dotenv').config();
+
+const jwt = require('jsonwebtoken');
+
+const app = express();
+const port = process.env.PORT || 5000;
+
 
 
 // Middleware
@@ -22,6 +22,14 @@ async function run(){
     try {
         const userCollection  = client.db('geniusCar').collection('services');
         const orderCollection = client.db('geniusCar').collection('orders');
+
+
+        app.post('/jwt', (req, res) => {
+            const user = req.body;
+            // console.log(user);
+            const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET,{expiresIn:'1h'});
+            res.send({token});
+        })
 
         // Read
         app.get('/services', async (req, res) => {

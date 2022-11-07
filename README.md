@@ -14,6 +14,7 @@
 - 67-8 Create Private route and move delete handler
 - 67-9 Module summary and update operation
 - 69-4 How does JWT token works and create access token secret
+- 69-5 Create JWT Token, Get jwt token on client side
 
 ## `Setup Server`
 - First create a folder and then run this command for generating <i>package.json</i>
@@ -76,7 +77,7 @@
     ```
 - setup the code in index.js
     ```bash
-    var jwt = require('jsonwebtoken');
+    const jwt = require('jsonwebtoken');
     ```
 - Then create random code, Firstly open terminal and type 
     ```bash
@@ -86,8 +87,9 @@
     ```bash
     require('crypto').randomBytes(64).toString('hex')
     ```
-    then a string value will be shown, copy the text and setup in .env and copy the code below and paste under jwt in index.js <br>
+    then a string value will be shown, copy the text and setup in .env and copy the code below later <br>
     ```bash
-    var token = jwt.sign({ foo: 'bar' }, process.env.ACCESS_TOKEN_SECRET);
+    // var token = jwt.sign({ foo: 'bar' }, process.env.ACCESS_TOKEN_SECRET);
+    const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET,{expiresIn:'1h'});
     ```
 
