@@ -30,6 +30,8 @@
 - 69-2 (Recap) Auth redirect after successful login
 - 69-3 Filter orders info by email address Introduction JWT token
 - 69-6 (advanced) Send jwt token in the server, verify and decode jwt token
+- 69-7 (Recap) JWT token verify and Handle 401, 403 to log out user
+- 69-8 Module Summary
 
 ## `Tips`
 - Follow the [Link](https://github.com/remix-run/react-router/blob/dev/examples/auth/src/App.tsx) to understand auth
