@@ -15,6 +15,7 @@
 - 67-9 Module summary and update operation
 - 69-4 How does JWT token works and create access token secret
 - 69-5 Create JWT Token, Get jwt token on client side
+- 69-6 (advanced) Send jwt token in the server, verify and decode jwt token
 
 ## `Setup Server`
 - First create a folder and then run this command for generating <i>package.json</i>

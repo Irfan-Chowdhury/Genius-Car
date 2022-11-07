@@ -18,6 +18,22 @@ app.use(express.json());
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.uys3vh8.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
+function verifyJWT(req, res, next){
+    const authHeader = req.headers.authorization;
+    if(!authHeader){
+        res.status(401).send({message:'Unauthorized Access'})
+    }
+    const token = authHeader.split(' ')[1];
+    jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, function(err, decoded){
+        if (err) {
+            res.status(401).send({message:'Unauthorized Access'});
+        }
+        req.decoded = decoded;
+        next();
+    });
+    // console.log(req.headers.authorization);
+}
+
 async function run(){
     try {
         const userCollection  = client.db('geniusCar').collection('services');
@@ -48,7 +64,9 @@ async function run(){
         });
 
         // Order API
-        app.get('/orders', async (req, res) => {
+        app.get('/orders',verifyJWT, async (req, res) => {
+            console.log(req.headers.authorization);
+
             let query  = {};
             if (req.query.email) {
                 query = {
@@ -61,14 +79,14 @@ async function run(){
         });
 
         // Create
-        app.post('/orders', async (req, res) => {
+        app.post('/orders', async (req, res) => {            
             const order = req.body;
             const result =  await orderCollection.insertOne(order);
             res.send(result);
         });
 
         // Delete
-        app.delete('/orders/:id', async (req, res) => {
+        app.delete('/orders/:id', async (req, res) => {            
             const id =  req.params.id;
             const query = {_id: ObjectId(id) }
             const result = await orderCollection.deleteOne(query);
