@@ -29,6 +29,7 @@
 - 67-9 Module summary and update operation
 - 69-2 (Recap) Auth redirect after successful login
 - 69-3 Filter orders info by email address Introduction JWT token
+- 69-6 (advanced) Send jwt token in the server, verify and decode jwt token
 
 ## `Tips`
 - Follow the [Link](https://github.com/remix-run/react-router/blob/dev/examples/auth/src/App.tsx) to understand auth
